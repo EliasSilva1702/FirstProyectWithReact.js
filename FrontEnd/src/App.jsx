@@ -1,7 +1,14 @@
-import React, { useEffect, useState } from 'react'
-import Header from './Components/Header'
 import './App.css'
-import Login from './page/Login/login'
+
+import React, { useEffect, useState } from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+
+import Header from './Components/Header'
+import Login from './Components/login/Login.jsx'
+import Register from "./Components/register/Register.jsx"
+import BtnFollow from './Components/BtnFollow.jsx'
+
+
 function App() {
 
 
@@ -17,34 +24,14 @@ function App() {
   
   return (
     <main className='bg-[#6c6f7d] h-screen'>
-
-      <Header />
-
-
-    
-
-
-
-
-      {/* <table className=''>
-        <thead>
-          <th>Name:</th>
-          <th>LastName:</th>
-          <th>mail:</th>
-          <th>password:</th>
-        </thead>
-
-        <tbody>
-          {data.map((d, i) => (
-            <tr key={i}>
-                <td>{d.name}</td>
-                <td>{d.lastName}</td>
-                <td>{d.mail}</td>
-                <td>{d.password}</td>
-              </tr>
-          ))}
-        </tbody>
-      </table>  */}
+      <BrowserRouter>
+    <Header />
+      <BtnFollow/>
+        <Routes>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/register" element={<Register/>}/>
+        </Routes>
+      </BrowserRouter>
 
     </main>
   )
