@@ -5,7 +5,7 @@ export default function Header() {
 
     return (
         
-        <header className="bg-[#e6ccb2] text-poppins font-semibold flex items-center justify-center p-4 rounded-b-md shadow-md">
+        <header className="bg-[#dee2e6] text-poppins font-semibold flex items-center justify-center p-4 rounded-b-md shadow-md">
            
             <a href="/">
                 <img
@@ -17,8 +17,8 @@ export default function Header() {
 
             <ul className="flex items-center justify-center mx-auto gap-10">
                 <li className="cursor-pointer">Inicio</li>
-                <li className="cursor-pointer">Menus</li>
-                <li className="cursor-pointer">Contacto</li>
+                <li className="cursor-pointer">Trends</li>
+                <li className="cursor-pointer">Contact</li>
             </ul>
 
             <ul className="flex items-center justify-center gap-7">

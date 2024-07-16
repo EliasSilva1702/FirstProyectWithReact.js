@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Header from './Components/Header'
 import Login from './Components/login/Login.jsx'
 import Register from "./Components/register/Register.jsx"
-import BtnFollow from './Components/BtnFollow.jsx'
+import SectionProducts from './Components/products/SectionProducts.jsx'
+
 
 
 function App() {
@@ -23,14 +24,16 @@ function App() {
   },[])
   
   return (
-    <main className='bg-[#6c6f7d] h-screen'>
+    <main className='bg-[#edede9] max-w-[1180px] mx-auto'>
       <BrowserRouter>
     <Header />
-      <BtnFollow/>
         <Routes>
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
         </Routes>
+        
+        <SectionProducts/>
+     
       </BrowserRouter>
 
     </main>
