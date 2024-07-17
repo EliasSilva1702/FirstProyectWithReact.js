@@ -3,37 +3,37 @@ import './index.css'
 import React, { useEffect, useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
-import Header from './Components/Header'
-import Login from './Components/login/Login.jsx'
-import Register from "./Components/register/Register.jsx"
-import SectionProducts from './Components/products/SectionProducts.jsx'
-import Trending from './Components/products/Trending.jsx'
-import Contact from './Components/Contact.jsx'
+import Header from './components/Header.jsx'
+import Login from './components/login/Login.jsx'
+import Register from "./components/register/Register.jsx"
+import SectionProducts from './components/products/SectionProducts.jsx'
+import Trending from './components/products/Trending.jsx'
+import Contact from './components/Contact.jsx'
+import conex from './components/conex.jsx'
 
 function App() {
 
 
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    //Conecto el front con la API de Backend
-     fetch('http://localhost:3000/users')
-        .then(res => res.json())
-        .then(data => setData(data))
-        .catch(err => console.log(err))
-  },[])
+  conex.
   
   return (
     <main className='bg-[#edede9] max-w-[1180px] mx-auto '>
       <BrowserRouter>
+
           <Header/>
+
         <Routes>
+
+          <Route path='/' element={<SectionProducts/>}/>
+
           <Route path="/login" element={<Login/>}/>
           <Route path="/register" element={<Register/>}/>
+
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
-        
-        <SectionProducts/>
-          <Contact id="Contact"/>
+
+
+          
 
       </BrowserRouter>
 

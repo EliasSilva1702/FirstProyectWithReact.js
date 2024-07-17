@@ -24,7 +24,7 @@ export default function Header() {
             <ul className="flex items-center justify-center mx-auto gap-10">
                 <a href={links.home}>Inicio</a>
                 <a href={links.trends}>Trenging</a>
-                <a href={links.contact} id="Contact">Contact</a>
+                <Link to='/contact' >Contact</Link>
             </ul>
 
             <ul className="flex items-center justify-center gap-7">
