@@ -3,50 +3,66 @@ import React from 'react'
 const bags = [
     {
       id: 1,
-      name: 'Basic Tee',
+      name: 'High Wall',
       href: '#',
       imageSrc: '../../public/Bags/High-Wall.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$35',
-      color: 'Black',
+      price: '$210',
+      color: 'Black and Orange',
     },
     {
         id: 2,
-        name: 'Basic Tee',
+        name: 'Medium Stuff',
         href: '#',
         imageSrc: '../../public/Bags/Medium-Stuff.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Charcoal'
+        price: '$220',
+        color: 'Blue'
     },
     {
         id: 3,
-        name: 'Basic Tee',
+        name: 'Normad Pouch',
         href: '#',
         imageSrc: '../../public/Bags/Normad-Pouch.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Grey'
+        price: '$50',
+        color: 'White and Black'
     },
     {
         
-        id: 3,
-        name: 'ArtWork Tee',
+        id: 4,
+        name: 'Zip High Wall',
         href: '#',
         imageSrc: '../../public/Bags/Zip-High-Wall.jpg',
         imageAlt: "Front of men's Basic Tee in black.",
-        price: '$35',
-        color: 'Grey'
+        price: '$150',
+        color: 'White and Blue'
         
+    },
+    {
+      id: 5,
+      name: 'Zip High Wall',
+      href: '#',
+      imageSrc: '../../public/Bags/Zip-Tote-Basket.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$140',
+      color: 'Washed Black'
+    },
+    {
+      id: 6,
+      name: 'Zip High Wall',
+      href: '#',
+      imageSrc: '../../public/Bags/Zip-Tote-Basket-2.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: '$140',
+      color: 'White and Black'
     }
   ]
-  
-// todo: Terminar bags
 
 function Bags() {
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-      <h2 className=" text-center text-2xl tracking-tight text-gray-900 font-semibold">Bags</h2>
+      <h2 className=" text-center text-5xl tracking-tight text-gray-900 font-semibold">Bags</h2>
 
       <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
         {bags.map((product) => (
@@ -66,7 +82,7 @@ function Bags() {
                     {product.name}
                   </a>
                 </h3>
-                <p className="mt-1 text-sm font-bold text-gray-900">{product.color}</p>
+                <p className="mt-1 text-sm text-gray-500">{product.color}</p>
               </div>
               <p className="text-sm font-medium text-gray-900">{product.price}</p>
             </div>

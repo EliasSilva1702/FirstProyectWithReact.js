@@ -1,11 +1,17 @@
 
 import { Link } from "react-router-dom"
+import Contact from "./Contact"
+const links = {
+    home: '/',
+    trends: './products', 
+    contact: './Contact.jsx'
+}
 
 export default function Header() {
 
     return (
         
-        <header className="bg-[#dee2e6] text-poppins font-semibold flex items-center justify-center p-4 rounded-b-md shadow-md">
+        <header className="bg-[#dee2e6] text-poppins font-medium flex items-center justify-center p-4 rounded-b-md shadow-md">
            
             <a href="/">
                 <img
@@ -16,14 +22,14 @@ export default function Header() {
              </a>
 
             <ul className="flex items-center justify-center mx-auto gap-10">
-                <li className="cursor-pointer">Inicio</li>
-                <li className="cursor-pointer">Trends</li>
-                <li className="cursor-pointer">Contact</li>
+                <a href={links.home}>Inicio</a>
+                <a href={links.trends}>Trenging</a>
+                <a href={links.contact} id="Contact">Contact</a>
             </ul>
 
             <ul className="flex items-center justify-center gap-7">
-               <Link to='/login'> <li id="login" className="cursor-pointer">Login</li></Link>
-                <Link to='/register'><li className="cursor-pointer">Register</li></Link>
+               <Link to='/login' className="cursor-pointer">Login</Link>
+                <Link to='/register' className="cursor-pointer">Register</Link>
             </ul>
         </header>
 
