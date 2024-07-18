@@ -1,11 +1,16 @@
 import React from 'react'
+import SectionProducts from './SectionProducts'
 
 
 function Trending() {
   return (
-    <div className="">
-    <h1 className='text-5xl text-center'>Trending now</h1>
-    </div>
+    <main>
+      <h1 className='text-4xl text-center my-8'>Trending Now</h1>
+      <SectionProducts>
+        <div className="">
+        </div>
+      </SectionProducts>
+    </main>
   )
 }
 

@@ -4,9 +4,9 @@ import Bags from './Bags'
 
 export default function SectionProducts() {
   return (
-    <div className="">
-    <Shirts/>
-    <Bags/>
+    <div className="" style={{ borderBottom: '1px solid black' }}>
+      <Bags />
+      <Shirts />
     </div>
   )
 }
