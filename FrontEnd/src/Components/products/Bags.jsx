@@ -1,63 +1,63 @@
 import React from 'react'
 
 const bags = [
-    {
-      id: 1,
-      name: 'High Wall',
-      href: '#',
-      imageSrc: '../../public/Bags/High-Wall.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: '$210',
-      color: 'Black and Orange',
-    },
-    {
-        id: 2,
-        name: 'Medium Stuff',
-        href: '#',
-        imageSrc: '../../public/Bags/Medium-Stuff.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$220',
-        color: 'Blue'
-    },
-    {
-        id: 3,
-        name: 'Normad Pouch',
-        href: '#',
-        imageSrc: '../../public/Bags/Normad-Pouch.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$50',
-        color: 'White and Black'
-    },
-    {
-        
-        id: 4,
-        name: 'Zip High Wall',
-        href: '#',
-        imageSrc: '../../public/Bags/Zip-High-Wall.jpg',
-        imageAlt: "Front of men's Basic Tee in black.",
-        price: '$150',
-        color: 'White and Blue'
-        
-    },
-    {
-      id: 5,
-      name: 'Zip High Wall',
-      href: '#',
-      imageSrc: '../../public/Bags/Zip-Tote-Basket.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: '$140',
-      color: 'Washed Black'
-    },
-    {
-      id: 6,
-      name: 'Zip High Wall',
-      href: '#',
-      imageSrc: '../../public/Bags/Zip-Tote-Basket-2.jpg',
-      imageAlt: "Front of men's Basic Tee in black.",
-      price: '$140',
-      color: 'White and Black'
-    }
-  ]
+  {
+    id: 1,
+    name: 'High Wall',
+    href: '#',
+    imageSrc: '../../public/Bags/High-Wall.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$210',
+    color: 'Black and Orange',
+  },
+  {
+    id: 2,
+    name: 'Medium Stuff',
+    href: '#',
+    imageSrc: '../../public/Bags/Medium-Stuff.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$220',
+    color: 'Blue'
+  },
+  {
+    id: 3,
+    name: 'Normad Pouch',
+    href: '#',
+    imageSrc: '../../public/Bags/Normad-Pouch.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$50',
+    color: 'White and Black'
+  },
+  {
+
+    id: 4,
+    name: 'Zip High Wall',
+    href: '#',
+    imageSrc: '../../public/Bags/Zip-High-Wall.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$150',
+    color: 'White and Blue'
+
+  },
+  {
+    id: 5,
+    name: 'Zip High Wall',
+    href: '#',
+    imageSrc: '../../public/Bags/Zip-Tote-Basket.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$140',
+    color: 'Washed Black'
+  },
+  {
+    id: 6,
+    name: 'Zip High Wall',
+    href: '#',
+    imageSrc: '../../public/Bags/Zip-Tote-Basket-2.jpg',
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: '$140',
+    color: 'White and Black'
+  }
+]
 
 function Bags() {
   return (
@@ -86,9 +86,12 @@ function Bags() {
               </div>
               <p className="text-sm font-medium text-gray-900">{product.price}</p>
             </div>
+            <button className='bg-black px-4 py-2 rounded-md w-full text-white my-4 transition-all hover:bg-black hover:opacity-85 '>
+              Add to Shopping Car</button>
           </div>
         ))}
       </div>
+
     </div>
   )
 }

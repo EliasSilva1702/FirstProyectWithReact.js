@@ -10,26 +10,38 @@ import Register from "./components/register/Register.jsx"
 import SectionProducts from './components/products/SectionProducts.jsx'
 import Trending from './components/products/Trending.jsx'
 import Contact from './components/Contact.jsx'
-import Bags from './components/products/Bags.jsx'
-import Shirts from './components/products/Shirts.jsx'
 
 function App() {
+
+  const [allProducts, setAllProducts] = useState()
+  const [total, setTotal] = useState(0)
+  const [countProducts, setCountProducts] = useState()
+
 
   return (
     <main className='bg-[#edede9] max-w-[1180px] mx-auto '>
 
       <BrowserRouter>
 
-        <Header />
+        <Header
+          allProducts={allProducts} setAllProducts={setAllProducts}
+          total={total} setTotal={setTotal}
+          countProducts={countProducts} setCountProducts={setCountProducts}
+        />
 
         <Routes>
 
-            <Route path="/" element={<SectionProducts />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
+          <Route path="/"
+            element={<SectionProducts
+              allProducts={allProducts} setAllProducts={setAllProducts}
+              total={total} setTotal={setTotal} 
+              countProducts={countProducts} setCountProducts={setCountProducts} />}
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/trending' element={<Trending />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/trending' element={<Trending />} />
 
         </Routes>
 
