@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function SectionProducts(allProducts, setAllProducts) {
+export default function SectionProducts({ allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal }) {
   const bags = [
     {
       id: 1,
@@ -8,8 +8,9 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/High-Wall.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$210',
+      price: 210,
       color: 'Black and Orange',
+      quantity: 1
     },
     {
       id: 2,
@@ -17,8 +18,9 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/Medium-Stuff.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$220',
-      color: 'Blue'
+      price: 220,
+      color: 'Blue',
+      quantity: 1
     },
     {
       id: 3,
@@ -26,8 +28,9 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/Normad-Pouch.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$50',
-      color: 'White and Black'
+      price: 50,
+      color: 'White and Black',
+      quantity: 1
     },
     {
 
@@ -36,9 +39,9 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/Zip-High-Wall.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$150',
-      color: 'White and Blue'
-
+      price: 150,
+      color: 'White and Blue',
+      quantity: 1
     },
     {
       id: 5,
@@ -46,8 +49,9 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/Zip-Tote-Basket.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$140',
-      color: 'Washed Black'
+      price: 140,
+      color: 'Washed Black',
+      quantity: 1
     },
     {
       id: 6,
@@ -55,14 +59,29 @@ export default function SectionProducts(allProducts, setAllProducts) {
       href: '#',
       imageSrc: '../../public/Bags/Zip-Tote-Basket-2.jpg',
       imageAlt: "Front of men's Basic Tee in black.",
-      price: '$140',
-      color: 'White and Black'
+      price: 140,
+      color: 'White and Black',
+      quantity: 1
     }
   ]
 
-  const onAddProducts = () => {
-    setAllProducts([...allProducts, product])
+  const onAddProducts = product => {
+
+    if (allProducts.find(item => item.id === product.id)) {
+      const products = allProducts.map(item => item.id === product.id
+        ? { ...item, quantity: item.quantity + 1 }
+        : item
+      );
+      setTotal(total + product.price * product.quantity)
+      setCountProducts(countProducts + product.quantity)
+      return setAllProducts([...products])
+    }
+
+    setTotal(total + product.price * product.quantity)
+    setCountProducts(countProducts + product.quantity)
+    setAllProducts([...allProducts, product]);
   }
+  console.log(allProducts);
   return (
 
 
@@ -93,8 +112,8 @@ export default function SectionProducts(allProducts, setAllProducts) {
                   <p className="text-sm font-medium text-gray-900">{product.price}</p>
                 </div>
               </div>
-              <button onClick={() => onAddProducts()}
-                className='bg-black px-4 py-2 rounded-md w-full text-white my-4 transition-all hover:bg-black hover:opacity-85 '>
+              <button onClick={() => onAddProducts(product)}
+                className='bg-black px-4 py-2 rounded-md w-full text-white my-4 transition-all hover:bg-black hover:opacity-85 hover:scale-105'>
                 Add to Shopping Car</button>
             </div>
           ))}

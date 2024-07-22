@@ -13,9 +13,9 @@ import Contact from './components/Contact.jsx'
 
 function App() {
 
-  const [allProducts, setAllProducts] = useState()
+  const [allProducts, setAllProducts] = useState([])
   const [total, setTotal] = useState(0)
-  const [countProducts, setCountProducts] = useState()
+  const [countProducts, setCountProducts] = useState(0)
 
 
   return (
