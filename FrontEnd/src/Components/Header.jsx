@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 
+
 export default function Header({ allProducts, setAllProducts, total, countProducts, setCountProducts, setTotal }) {
 
 
@@ -14,6 +15,10 @@ export default function Header({ allProducts, setAllProducts, total, countProduc
         setTotal(total - product.price * product.quantity)
         setCountProducts(countProducts - product.quantity)
         setAllProducts(restults)
+    }
+
+    const colseMenuCar = () => {
+        setActive(false)
     }
 
     const cleanShoppingCar = () => {
@@ -77,10 +82,20 @@ export default function Header({ allProducts, setAllProducts, total, countProduc
                     {
                         allProducts.length ? (
                             <>
-                                <div className="">
+                                <div className="relative">
+
+                                    <div className="absolute right-0 m-3 cursor-pointer transition-all hover:scale-110" onClick={colseMenuCar}>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                        </svg>
+
+                                    </div>
+
                                     {allProducts.map(product => (
 
                                         <div className="" key={product.id}>
+
                                             <div className="flex items-center justify-center flex-col gap-5 py-5 px-10">
                                                 <div className="flex items-center justify-between gap-5 border-b border-b-[#8d99ae] w-full p-4 text-sm">
                                                     <span>{product.quantity}</span>
@@ -114,8 +129,8 @@ export default function Header({ allProducts, setAllProducts, total, countProduc
                                     <div className="text-center">Total: ${total}</div>
 
                                     <button className="flex items-center justify-center mx-auto gap-2 px-4 py-2 rounded-md w-fit text-white my-5 transition-all bg-black opacity-85 cursor-pointer
-                                    hover:bg-[#22223b] hover:scale-105" 
-                                    onClick={cleanShoppingCar}>Clean Shopping car
+                                    hover:bg-[#22223b] hover:scale-105"
+                                        onClick={cleanShoppingCar}>Clean Shopping car
 
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
 
@@ -126,9 +141,18 @@ export default function Header({ allProducts, setAllProducts, total, countProduc
                                 </div>
                             </>
                         ) : (
-                            <>
-                                <h1 className="text-center opacity-85 m-4">Shopping car is empty</h1>
-                            </>
+                            <div className="flex items-center justify-between">
+
+                                <div className="absolute right-0 mr-4 cursor-pointer transition-all hover:scale-110" onClick={colseMenuCar}>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+
+                                </div>
+                                <h1 className=" mx-auto opacity-85 m-4">Shopping car is empty</h1>
+
+                            </div>
                         )
                     }
 

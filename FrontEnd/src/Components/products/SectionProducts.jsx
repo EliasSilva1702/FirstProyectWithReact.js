@@ -62,6 +62,48 @@ export default function SectionProducts({ allProducts, setAllProducts, countProd
       price: 140,
       color: 'White and Black',
       quantity: 1
+    },
+    {
+      id: 7,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: 35,
+      color: 'Black',
+      quantity: 1
+    },
+    {
+      id: 8,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: '../../public/Shirts/Basic-Tee_Charcoal.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: 35,
+      color: 'Charcoal',
+      quantity: 1
+    },
+    {
+      id: 9,
+      name: 'Basic Tee',
+      href: '#',
+      imageSrc: '../../public/Shirts/Basic-Tee_Aspen-White.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: 35,
+      color: 'Grey',
+      quantity: 1
+    },
+    {
+  
+      id: 10,
+      name: 'ArtWork Tee',
+      href: '#',
+      imageSrc: '../../public/Shirts/Artwork-Tee_Iso-Dots.jpg',
+      imageAlt: "Front of men's Basic Tee in black.",
+      price: 35,
+      color: 'Grey',
+      quantity: 1
+  
     }
   ]
 
@@ -81,7 +123,7 @@ export default function SectionProducts({ allProducts, setAllProducts, countProd
     setCountProducts(countProducts + product.quantity)
     setAllProducts([...allProducts, product]);
   }
-  console.log(allProducts);
+  
   return (
 
 

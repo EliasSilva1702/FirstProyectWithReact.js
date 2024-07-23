@@ -1,43 +1,44 @@
 import React from 'react'
+import data from './contactData.json'
 
-const data = {
-  name: 'Ecommers made by Elias Silva',
-  email: 'eliassilva@gmail.com',
-  phone: '+598 099 405 940',
-  about: 'This Ecommerce is made as a project in',
-  about2: 'for my portfolio'
-}
 
 function Contact() {
   return (
     <div>
       <h1 className='text-center mt-10 text-4xl'>Contact me</h1>
 
-      <div className="bg-[#001d3d] shadow-2xl border border-black max-w-[30rem] mx-auto my-2 rounded-3xl ">
-
-      <form className=' text-[#ffc600] max-w-96 mx-auto my-24 p-12 rounded-lg shadow-2xl'>
+      <form className=' bg-[#343a40] text-[#ffffff] max-w-[1080px] h-auto mx-auto my-24 p-12 rounded-lg shadow-2xl'>
 
         <div className="flex flex-col">
-          <div className="mb-8 text-center">
-            <label htmlFor="name">{data.name}</label>
+
+          <div className="mb-8 text-center font-medium">
+            <label htmlFor="email">Email: <span className='font-medium'>{data.email}</span> </label>
           </div>
 
-          <div className="mb-8 text-center">
-            <label htmlFor="email">{data.email}</label>
+          <div className="mb-8 text-center font-medium">
+            <label htmlFor="phone">Phone Number: <span className='font-semibold'>{data.phone}</span></label>
           </div>
 
-          <div className="mb-8 text-center">
-            <label htmlFor="phone">{data.phone}</label>
+          <div className="mb-8 shadow-xl text-center rounded-lg font-medium">
+            <label htmlFor="about">{data.about}</label>
+            <div className="flex items-center flex-col">
+              <div className="flex items-center justify-center">
+
+                <span className='font-semibold text-sky-600'> {data.react.name}</span>
+                <img src={data.react.icon}
+                  alt="React.js" className='w-5 h-10 ml-2' />
+              </div>
+            </div>
           </div>
 
-          <div className="mb-8 shadow-xl text-center rounded-lg">
-            <label htmlFor="about">{data.about} <span className='text-sky-400 font-medium'>React</span> {data.about2}</label>
+          <div className="mt-8 text-center text-sm font-medium">
+            <label htmlFor="name">{data.info}</label>
           </div>
 
         </div>
       </form>
-      </div>
     </div>
+
   )
 }
 
