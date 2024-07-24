@@ -31,13 +31,14 @@ export default function Header({ allProducts, setAllProducts, total, countProduc
 
         <header className="bg-[#dee2e6] text-poppins font-medium flex items-center justify-center p-4 rounded-b-md shadow-md">
 
-            <a href="/">
+            <Link to='/'>
                 <img
                     className="h-fit max-w-48 object-contain"
                     src="../../public/logo-web-byseconat.png"
                     alt="Business logo"
                 />
-            </a>
+            </Link>
+
 
             <ul className="flex items-center justify-center mx-auto gap-10">
                 <Link to="/">Inicio</Link>

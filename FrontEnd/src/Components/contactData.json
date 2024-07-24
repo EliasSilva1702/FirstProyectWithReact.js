@@ -2,36 +2,31 @@
     "info": "Ecommerce made by Elias Silva",
     "email": "eliassilva@gmail.com",
     "phone": "+598 099 405 940",
-    "about": "This is an exciting project that utilizes advanced technologies like",
-    "about2": "and the versatile Tailwind CSS framework. My goal is to create a seamless and visually appealing experience, tailored to meet modern demands.",
-    
-    "react": {
-        "name": "React.js",
-        "icon": "./public/Icons/react.svg"
-    },
-
-    "node": {
-        "name": "Node.js",
-        "icon": "./public/Icons/node.svg"
-    },
-
-    "tailwind": {
-        "name": "Tailwind CSS",
-        "icon": "./public/Icons/tailwind.svg"
-    },
-
-    "html": {
-        "name": "HTML5",
-        "icon": "./public/Icons/html5.svg"
-    },
-
-    "css": {
-        "name": "CSS3",
-        "icon": "./public/Icons/css.svg"
-    },
-
-    "js": {
-        "name": "JavaScript",
-        "icon": "./public/Icons/javascript.svg"
-    }
+    "about": "This is an exciting project that utilizes advanced technologies like:",
+    "tec": [
+        {
+            "name": "React.js",
+            "icon": "./public/Icons/react.svg"
+        },
+        {
+            "name": "Node.js",
+            "icon": "./public/Icons/nodejs.svg"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "./public/Icons/tailwindcss.svg"
+        },
+        {
+            "name": "HTML5",
+            "icon": "./public/Icons/html5.svg"
+        },
+        {
+            "name": "CSS3",
+            "icon": "./public/Icons/css.svg"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "./public/Icons/javascript.svg"
+        }
+    ]
 }

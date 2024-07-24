@@ -6,10 +6,8 @@ function Trending() {
   return (
     <main>
       <h1 className='text-4xl text-center my-8'>Trending Now</h1>
-      <SectionProducts>
-        <div className="">
-        </div>
-      </SectionProducts>
+      <SectionProducts/>
+
     </main>
   )
 }
